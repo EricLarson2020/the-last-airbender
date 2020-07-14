@@ -27,8 +27,8 @@ require "rails_helper"
       within(first(".member")) do
         expect(page).to have_css(".name")
         expect(page).to have_css(".allies")
-        expect(page).to have_css("enemies")
-        expect(page).to have_css("affiliation")
+        expect(page).to have_css(".enemies")
+        expect(page).to have_css(".affiliation")
       end
     end
   end
