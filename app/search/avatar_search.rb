@@ -2,7 +2,7 @@ class AvatarSearch
 
   def members(nation)
     json = AvatarService.new.members_of_nation(nation)
-
+  
     members = []
       json.each do |member|
         members <<  Member.new({
