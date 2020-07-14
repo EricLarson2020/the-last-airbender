@@ -8,21 +8,21 @@
 </br>
 
   <section class = "name">
-<%=  member.name %>
+<strong> Name: <%=  member.name %></strong>
   <section class = "affiliation">
-    <%= member.affiliation %>
+  <strong> Affiliation: <%= member.affiliation %> </strong>
 
   <section class="allies">
-    <% member.allies.each do |ally| %>
+    <strong> Allies: <% member.allies.each do |ally| %>
     <%= ally %>
-    <% end %>
+    <% end %> </strong>
   <section class="enemies">
-    <% member.enemies.each do |enemy| %>
+    <strong> Enemies: <% member.enemies.each do |enemy| %>
     <%= enemy %>
-  <% end %>
+  <% end %></strong>
 
   <section class="url">
     <% if member.url != nil %>
-      <%= member.url %>
+      <%= image_tag(member.url) %>
     <% end %>
   <% end %>
