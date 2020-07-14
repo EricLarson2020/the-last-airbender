@@ -1,6 +1,8 @@
 class SearchController < ApplicationController
 
   def index
+    AvatarSearch.new.members(params["nation"])
+
     nation =  params["nation"].gsub("_", " ")
     conn = Faraday.new(url: "https://last-airbender-api.herokuapp.com/api/v1")
 
