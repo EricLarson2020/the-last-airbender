@@ -24,6 +24,8 @@ require "rails_helper"
       expect(current_path).to eq("/search")
       expect(page).to have_content("20 members")
 
+
+
       within(first(".member")) do
         expect(page).to have_css(".name")
         expect(page).to have_css(".allies")

@@ -2,4 +2,27 @@
 
 <br>
 
-<% @member.each do |member| %>
+<% @members.each do |member| %>
+<section class="member">
+</br>
+</br>
+
+  <section class = "name">
+<%=  member.name %>
+  <section class = "affiliation">
+    <%= member.affiliation %>
+
+  <section class="allies">
+    <% member.allies.each do |ally| %>
+    <%= ally %>
+    <% end %>
+  <section class="enemies">
+    <% member.enemies.each do |enemy| %>
+    <%= enemy %>
+  <% end %>
+
+  <section class="url">
+    <% if member.url != nil %>
+      <%= member.url %>
+    <% end %>
+  <% end %>

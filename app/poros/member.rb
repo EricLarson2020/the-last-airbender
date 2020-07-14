@@ -1,5 +1,5 @@
 class Member
-
+  attr_reader :name, :allies, :enemies, :affiliation, :url
   def initialize(data)
 
     @name = data[:name]

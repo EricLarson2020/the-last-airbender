@@ -9,9 +9,9 @@ class SearchController < ApplicationController
     end
 
     json = JSON.parse(response.body, symbolize_names: true)
-
-    @members = json.each do |member|
-      Member.new({
+    @members = []
+      json.each do |member|
+    @members <<  Member.new({
         name: member[:name],
         allies: member[:allies],
         enemies: member[:enemies],
@@ -20,6 +20,7 @@ class SearchController < ApplicationController
         })
 
     end
+
 
 
 
