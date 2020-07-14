@@ -1,3 +1,4 @@
+require "rails_helper"
 # As a user,
 # When I visit "/"
 # And I Select "Fire Nation" from the select field
@@ -16,9 +17,9 @@
   describe "Search Index Page" do
     it "can display the information for the members of the fire nation" do
 
-      visit '/'
+    visit '/'
 
-      select "Fire Nation", from: :select
+      select "Fire Nation", from: :nation
       click_on "Search For Members"
       expect(current_path).to eq("/search")
       expect(page).to have_content("20 members")
